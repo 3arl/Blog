@@ -1,21 +1,11 @@
-<!DOCTYPE html>
+<x-layout>
+    <x-slot name="content">
+        <article>
+            <h1>{{$post->title}}</h1>
 
-<head>
-    <title>HI</title>
-    <link rel="stylesheet" href="/app.css">
-    {{--    <script src="/app.js"></script>--}}
-</head>
+            <div>{!! $post->body !!}</div>
+        </article>
 
-
-<body>
-
-
-
-<article>
-    <?= $post;?>
-</article>
-
-<a href="/">Back</a>
-
-
-</body>
+        <a href="/">Back</a>
+    </x-slot>
+</x-layout>

@@ -1,20 +1,17 @@
-<!DOCTYPE html>
+<x-layout>
+    <x-slot name="content">
+        <h1>3ARL's BLOG</h1>
 
-<head>
-    <title>Blog</title>
-    <link rel="stylesheet" href="app.css">
-    {{--    <script src="/app.js"></script>--}}
-</head>
+        @foreach ($posts as $post)
+            <article>
+                <h1>
+                    <a href="/posts/{{$post->slug}}">
+                        {{$post->title}}
+                    </a>
+                </h1>
 
-
-<body>
-
-<h1>3ARL's BLOG</h1>
-
-    <?php foreach ($posts as $post) : ?>
-        <article>
-            <?= $post; ?>
-        </article>
-    <?php endforeach; ?>
-
-</body>
+                <div>{{ $post->excerpt}}</div>
+            </article>
+        @endforeach
+    </x-slot>
+</x-layout>
