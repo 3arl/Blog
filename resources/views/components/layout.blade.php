@@ -8,7 +8,8 @@
 
 
 <body>
+{{--//special variable slot. no need for <x-slot name="variable"></x-slot>--}}
 
-{{$content}}
+{{$slot}}
 
 </body>

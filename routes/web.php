@@ -17,15 +17,10 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 */
 
 Route::get('/', function () {
-
-
-
-
-
+//    cache()->flush();
     return view(
         'posts', [
          'posts'=> Post::all()
-//        'posts'=>$posts
         ]);
 
 });
@@ -34,7 +29,7 @@ Route::get('/', function () {
 Route::get('posts/{post}', function ($slug) {
 
     return view('post' , [
-       'post'=> Post::find($slug)
+       'post'=> Post::findOrFail($slug)
     ]);
 
-})->where('post','[A-z_\-]+');
+});

@@ -1,11 +1,9 @@
 <x-layout>
-    <x-slot name="content">
-        <article>
-            <h1>{{$post->title}}</h1>
+    <article>
+        <h1>{{$post->title}}</h1>
 
-            <div>{!! $post->body !!}</div>
-        </article>
+        <div>{!! $post->body !!}</div>
+    </article>
 
-        <a href="/">Back</a>
-    </x-slot>
+    <a href="/">Back</a>
 </x-layout>
