@@ -26,10 +26,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('posts/{post}', function ($slug) {
+Route::get('posts/{post}', function (Post $post) {
+//    dd($post);
 
     return view('post' , [
-       'post'=> Post::findOrFail($slug)
+       'post'=> $post
     ]);
 
 });
