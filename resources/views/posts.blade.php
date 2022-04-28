@@ -9,7 +9,7 @@
 
             <div>
                 {{ $post->excerpt}}
-                <a href="/posts/{{$post->id}}">...</a>
+                <a href="/posts/{{$post->slug}}">...</a>
             </div>
         </article>
     @endforeach
