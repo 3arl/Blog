@@ -19,3 +19,33 @@ article + article {
     /*margin-top: 3rem;*/
     /*padding-top: 3rem;*/
 }
+
+.headClass {
+    top: 0;
+    position: sticky;
+    text-align: center;
+    color: white;
+    font-size: xxx-large;
+    background: #2d3748;
+}
+
+.footerClass{
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    color: white;
+    background: #2d3748;
+    font-size: xx-large;
+    margin-bottom: 1rem;
+}
+
+.b-center{
+    text-align: center;
+    align-content: center;
+}
+
+.b-white{
+    color: white;
+    background: #2d3748;
+    font-size: xx-large;
+}

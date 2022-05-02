@@ -2,6 +2,7 @@
 
 <head>
     <title>3arl's Blog</title>
+    <h1 class="headClass">3arl's Blog</h1>
     <link rel="stylesheet" href="/app.css">
     {{--    <script src="/app.js"></script>--}}
 </head>
@@ -13,3 +14,9 @@
 {{$slot}}
 
 </body>
+<a href="/">
+    <div class="footerClass" onclick="">
+        HOME
+    </div>
+</a>
+

@@ -3,9 +3,11 @@
 
         @foreach ($posts as $post)
             <article>
+                <h2 class="b-center">{{$post->category->name}}</h2>
+
                 <h1>{{$post->title}}</h1>
 
-                <h2>{{$post->category->slug}}</h2>
+                <p><a href="/users/{{$post->user->slug}}">{{$post->user->name}}</a> </p>
 
                 <div>
                     {{ $post->excerpt}}

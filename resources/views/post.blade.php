@@ -2,15 +2,13 @@
     <article>
         <a href="/categories/{{$post->category->slug}}">{{$post->category->name}}</a>
 
-        <p><a href="#">{{$post->user->name}}</a> </p>
-
-        <p >{{$post->category->name}}</p>
+        <p><a href="/users/{{$post->user->slug}}">{{$post->user->name}}</a> </p>
 
         <h1>{!!$post->title!!}</h1>
 
-        <div>{!! $post->body !!}</div>
+        <div>{!! '<p>' . $post->body . '</p>' !!}</div>
 
     </article>
 
-    <a href="/">Back</a>
+
 </x-layout>

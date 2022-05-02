@@ -1,16 +1,22 @@
 <x-layout>
-    <h1>3ARL's BLOG</h1>
 
     @foreach ($categories as $category)
 
-        <article>
-            <h1>{{$category->name}}</h1>
+        <h1 class="b-center"><a href="/categories/{{$category->slug}}" >{{$category->name}}</a> </h1>
 
-            <div>
-                <a href="/categories/{{$category->slug}}">...</a>
-            </div>
-        </article>
+        @foreach($category->posts->slice(0,3) as $post)
+            <article>
+                <h1>{{$post->title}}</h1>
+
+                <p><a href="/users/{{$post->user->slug}}">{{$post->user->name}}</a> </p>
+
+                <div>
+                    {!! $post->excerpt !!}
+                    <a href="/posts/{{$post->slug}}">...</a>
+                </div>
+            </article>
+        @endforeach
+
     @endforeach
 
-    <a href="/">Back</a>
 </x-layout>

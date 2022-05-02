@@ -24,14 +24,17 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'John Doe',
             'email' => 'johndoe@example.com',
+            'slug'=> 'john_doe'
         ]);
         User::factory()->create([
             'name' => 'Jane Doe',
             'email' => 'janedoe@example.com',
+            'slug'=> 'jane_doe'
         ]);
         User::factory()->create([
             'name' => 'Jake Doe',
             'email' => 'jakedoe@example.com',
+            'slug'=> 'jake_doe'
         ]);
 
 
@@ -60,6 +63,7 @@ class DatabaseSeeder extends Seeder
 
 
         Post::factory(35)->create();
+
 
     }
 }
