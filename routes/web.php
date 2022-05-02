@@ -21,7 +21,7 @@ Route::get('/', function () {
 //    cache()->flush();
     return view(
         'posts', [
-         'posts'=> Post::all()
+         'posts'=> Post::with('category')->get()
         ]);
 
 });

@@ -9,7 +9,7 @@
 {{--            <h2><a href="/categories/{{$post->category->slug}}">{{$post->category->name}}</a></h2>--}}
 
             <div>
-                {{ $post->excerpt}}
+                {!! $post->excerpt !!}
                 <a href="/posts/{{$post->slug}}">...</a>
             </div>
         </article>
